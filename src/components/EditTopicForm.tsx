@@ -53,7 +53,7 @@ export default function EditTopicForm({
         value={newDescription}
       />
       <button
-        className="bg-green-800 text-white font-bold px-6 py-3 w-fit rounded-md"
+        className="bg-blue-700 text-white font-bold px-6 py-3 w-fit rounded-md"
         type="submit"
       >
         Update Topic

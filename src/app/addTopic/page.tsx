@@ -1,11 +1,17 @@
 'use client'
-import { useRouter } from 'next/navigation'
+import { useSession } from 'next-auth/react'
+import { redirect, useRouter } from 'next/navigation'
 import { useState } from 'react'
 
 export default function AddTopic() {
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
   const router = useRouter()
+  const { data: session } = useSession()
+
+  if (!session) {
+    redirect('/login')
+  }
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -51,7 +57,7 @@ export default function AddTopic() {
         value={description}
       />
       <button
-        className="bg-green-800 text-white font-bold px-6 py-3 w-fit rounded-md"
+        className="bg-blue-700 text-white font-bold px-6 py-3 w-fit rounded-md"
         type="submit"
       >
         Add Topic

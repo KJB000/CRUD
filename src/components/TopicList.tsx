@@ -45,7 +45,7 @@ export default function TopicsList() {
       {topics.map((topic: Topic) => (
         <div
           key={topic._id}
-          className="p-4 border border-slate-300 my-3 flex justify-between gap-5 items-start"
+          className="p-4  border-slate-300 my-3 flex justify-between gap-5 items-start  bg-gray-600 text-white"
         >
           <div>
             <h2 className="text-2xl font-bold">{topic.title}</h2>
