@@ -1,11 +1,18 @@
 import { auth } from '@/auth'
 import EditTopicForm from '@/components/EditTopicForm'
+<<<<<<< HEAD
 import { redirect } from 'next/navigation'
+=======
+>>>>>>> ba5a737a6e563cbd6cf459f74067e2fe29c296ee
 import React from 'react'
 
 const apiUrl = process.env.API_URL
 
+<<<<<<< HEAD
 async function getTopicById(id: string) {
+=======
+const getTopicById = async (id: string) => {
+>>>>>>> ba5a737a6e563cbd6cf459f74067e2fe29c296ee
   try {
     const res = await fetch(`${apiUrl}/api/topics/${id}`, {
       cache: 'no-store',
